@@ -11,11 +11,25 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("🎯🎯🎯\nPUT THE BULLS EYE AS CLOSE AS YOU CAN")
+                .bold()
+                .kerning(2.0)
+                .multilineTextAlignment(.center)
+                .lineSpacing(3.0)
+                .font(.footnote)
             Text("89")
+                .kerning(-1.0)
+                .fontWeight(.black)
+                .lineSpacing(-1.0)
+                .font(.largeTitle)
             HStack {
                 Text("1")
+                    .bold()
+                    .font(.headline)
                 Slider(value: .constant(50), in: 1.0 ... 100.0)
+                    .padding(2)
                 Text("100")
+                    .bold()
+                    .font(.headline)
             }
             Button(action: {}) {
                 Text("Hit Me")
