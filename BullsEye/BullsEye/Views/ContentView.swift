@@ -50,7 +50,7 @@ struct ContentView: View {
                     message: Text("Value hit is \(roundValue).\n" +
                                     "You have scored \(scoreValue) points in this round."),
                     dismissButton:
-                        .default(Text("Awesome"), action: { print("Value is \(self.sliderValue) | Score is \(scoreValue) | Clicked: Dismissed") })
+                        .default(Text("Awesome!"), action: { print("Value is \(self.sliderValue) | Score is \(scoreValue) | Clicked: Dismissed") })
                 )
             })
         }
