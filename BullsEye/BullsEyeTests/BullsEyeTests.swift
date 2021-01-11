@@ -21,14 +21,14 @@ class BullsEyeTests: XCTestCase {
     }
 
     func testScorePositive() throws {
-        var guess = game.target + 5
-        var score = game.score(sliderValue: guess)
+        let guess = game.target + 5
+        let score = game.score(sliderValue: guess)
         XCTAssertEqual(score, 95)
     }
 
     func testScoreNegative() throws {
-        var guess = game.target - 5
-        var score = game.score(sliderValue: guess)
+        let guess = game.target - 5
+        let score = game.score(sliderValue: guess)
         XCTAssertEqual(score, 95)
     }
 
