@@ -8,9 +8,9 @@
 import Foundation
 
 struct Game {
-    var target: Int = Int.random(in: 1 ... 100)
-    var points: Int = 0
-    var round: Int = 1
+    var target = Int.random(in: 1 ... 100)
+    var points = 0
+    var round = 1
 
     /// Calculating score
     func score(sliderValue: Int) -> Int {
