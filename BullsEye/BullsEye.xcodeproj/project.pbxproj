@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F161253925CFA53A008C1561 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161253825CFA539008C1561 /* TextViews.swift */; };
+		F161253D25CFA540008C1561 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161253C25CFA540008C1561 /* Shapes.swift */; };
 		F16925C925AC0D62004138C3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16925C825AC0D62004138C3 /* Game.swift */; };
 		F16925D225AC1707004138C3 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16925D125AC1707004138C3 /* BullsEyeTests.swift */; };
 		F1F8188225A7B4B600BF8EB3 /* BullsEyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8188125A7B4B600BF8EB3 /* BullsEyeApp.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F161253825CFA539008C1561 /* TextViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		F161253C25CFA540008C1561 /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		F16925C825AC0D62004138C3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F16925CF25AC1707004138C3 /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16925D125AC1707004138C3 /* BullsEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeTests.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				F1F8188325A7B4B600BF8EB3 /* ContentView.swift */,
+				F161253825CFA539008C1561 /* TextViews.swift */,
+				F161253C25CFA540008C1561 /* Shapes.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1F8188425A7B4B600BF8EB3 /* ContentView.swift in Sources */,
+				F161253925CFA53A008C1561 /* TextViews.swift in Sources */,
+				F161253D25CFA540008C1561 /* Shapes.swift in Sources */,
 				F16925C925AC0D62004138C3 /* Game.swift in Sources */,
 				F1F8188225A7B4B600BF8EB3 /* BullsEyeApp.swift in Sources */,
 			);
