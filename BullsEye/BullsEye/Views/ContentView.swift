@@ -77,6 +77,10 @@ struct HitMeButtonView: View {
     )
     .foregroundColor(Color.white)
     .cornerRadius(21.0)
+    .overlay(
+      RoundedRectangle(cornerRadius: 21.0)
+        .strokeBorder(Color.white, lineWidth: 2.0)
+    )
     .alert(isPresented: $alertIsVisible, content: {
       let roundValue: Int = Int(sliderValue.rounded())
       let scoreValue: Int = game.score(sliderValue: roundValue)
@@ -87,7 +91,7 @@ struct HitMeButtonView: View {
         dismissButton:
           .default(Text("Awesome!"),
                    action: {
-                    print("Value selected: \(roundValue) | Score is: \(scoreValue) | Clicked: Dismissed")
+                    print("Value selected: \(roundValue) | Score is: \(scoreValue) | Clicked: Awesome")
 
            })
       )

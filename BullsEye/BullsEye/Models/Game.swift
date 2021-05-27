@@ -14,6 +14,6 @@ struct Game {
 
     /// Calculating score
     func score(sliderValue: Int) -> Int {
-        return 100 - abs(self.target - sliderValue)
+        return 100 - abs(target - sliderValue)
     }
 }

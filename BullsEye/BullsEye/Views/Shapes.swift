@@ -16,6 +16,15 @@ struct Shapes: View {
           //.stroke(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/, lineWidth: 20.0)
           .strokeBorder(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/, lineWidth: 10.0)
           .frame(width: 200.0, height: 100)
+        RoundedRectangle(cornerRadius: 20.0)
+          .fill(Color.blue)
+          .frame(width: 200.0, height: 100)
+        Capsule()
+          .fill(Color.blue)
+          .frame(width: 200.0, height: 100)
+        Ellipse()
+          .fill(Color.blue)
+          .frame(width: 200.0, height: 100)
       }
       .background(Color.green)
     }
