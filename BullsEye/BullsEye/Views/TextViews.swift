@@ -42,7 +42,7 @@ struct SliderLabelText: View {
       .bold()
       .font(.headline)
       .foregroundColor(Color("TextColor"))
-      .frame(width: 35.0)
+      .frame(width: 40.0)
   }
 }
 
@@ -64,7 +64,7 @@ struct TextViews_Previews: PreviewProvider {
     VStack {
       InstructionText(text: "🎯🎯🎯\nPut the Bulls eye as close as you can")
       BigNumberText(text: "999")
-      SliderLabelText(text: "99")
+      SliderLabelText(text: "100")
       LabelText(text: "Round")
     }
   }
