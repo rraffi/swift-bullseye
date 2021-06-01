@@ -18,8 +18,7 @@ struct BackgroundView: View {
     }
     .padding()
     .background(
-      Color("BackgroundColor")
-        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+      RingsView()
     )
   }
 }
@@ -29,7 +28,11 @@ struct TopView: View {
 
   var body: some View {
     HStack {
-      RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+      Button(action: {
+        game.restart()
+      }) {
+        RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+      }
       Spacer()
       RoundedImageViewFilled(systemName: "list.dash")
     }
@@ -53,9 +56,31 @@ struct BottomView: View {
 
   var body: some View {
     HStack {
-      NumberView(title: "Score", text: String(game.points))
+      NumberView(title: "Score", text: String(game.score))
       Spacer()
       NumberView(title: "Round", text: String(game.round))
+    }
+  }
+}
+
+struct RingsView: View {
+  @Environment(\.colorScheme) var colorScheme
+
+  var body: some View {
+    ZStack {
+
+      Color("BackgroundColor")
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+      ForEach(1..<6) { ring in
+        let diameter = CGFloat(ring * 100)
+        let opacity = colorScheme == .dark ? 0.1 : 0.3
+        Circle()
+          .stroke(lineWidth: 20.0)
+          .fill(
+            RadialGradient(gradient: Gradient(colors: [Color("RingsColor").opacity(0.8 * opacity), Color("RingsColor").opacity(0)]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 100, endRadius: 300)
+          )
+          .frame(width: diameter, height: diameter)
+      }
     }
   }
 }
@@ -63,5 +88,7 @@ struct BottomView: View {
 struct BackgroundView_Previews: PreviewProvider {
   static var previews: some View {
     BackgroundView(game: .constant(Game()))
+    BackgroundView(game: .constant(Game()))
+      .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
   }
 }

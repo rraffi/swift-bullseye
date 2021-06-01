@@ -19,9 +19,10 @@ struct ContentView: View {
       BackgroundView(game: $game)
       VStack {
         InstructionsView(game: $game)
-        SliderView(sliderValue: $sliderValue)
+           .padding(.bottom, 100)
         HitMeButtonView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
       }
+      SliderView(sliderValue: $sliderValue)
     }
   }
 }
@@ -82,16 +83,16 @@ struct HitMeButtonView: View {
     )
     .alert(isPresented: $alertIsVisible, content: {
       let roundValue: Int = Int(sliderValue.rounded())
-      let scoreValue: Int = game.score(sliderValue: roundValue)
+      let points: Int = game.points(sliderValue: roundValue)
       return  Alert(
         title: Text("Hello there!"),
         message: Text("Value hit is \(roundValue).\n" +
-                        "You have scored \(scoreValue) points in this round."),
+                        "You have scored \(points) points in this round."),
         dismissButton:
           .default(Text("Awesome!"),
                    action: {
-                    print("Value selected: \(roundValue) | Score is: \(scoreValue) | Clicked: Awesome")
-
+                    print("Value selected: \(roundValue) | Score is: \(points) | Clicked: Awesome")
+                    game.startNewRound(points: points)
            })
       )
     })
